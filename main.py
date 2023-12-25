@@ -1,22 +1,21 @@
 try:
-    size = int(input("Введите размер песочных часов (нечетное число): "))
-
+    size = int(input("Enter the number: "))
     if size % 2 == 0:
-        print("Размер должен быть нечетным!")
+        print("Number must be even")
     else:
-        i = 1
+        top = size // 2 + 1
+        bottom = size - top
 
-        while i <= size:
-            if i <= size // 2 + 1:
-                spaces = " " * (i - 1)
-                stars = "*" * ((size - i * 2) + 2)
+        for i in range(size):
+            if i < top:
+                stars = "*" * (size - 2 * i)
+                spaces = " " * i
             else:
-                spaces = " " * (size - i)
-                stars = "*" * ((i - size // 2) * 2)
+                stars = "*" * (size - 2 * (bottom - (i - top + 1)))
+                spaces = " " * (size - i - 1)
 
             line = spaces + stars
             print(line)
-            i += 1
 except Exception as e:
     print(e)
     print('Error importing modules')
