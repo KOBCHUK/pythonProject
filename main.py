@@ -1,6 +1,6 @@
 try:
-    x = 4
-    y = 4
+    x = 5
+    y = 5
     i = j = 0
     while i < x:
         j = 0
