@@ -8,11 +8,11 @@ try:
 
         for i in range(size):
             if i < top:
-                stars = "*" * (size - 2 * i)
-                spaces = " " * i
+                stars = "* " * (size - 2 * i)
+                spaces = "  " * i
             else:
-                stars = "*" * (size - 2 * (bottom - (i - top + 1)))
-                spaces = " " * (size - i - 1)
+                stars = "* " * (size - 2 * (bottom - (i - top + 1)))
+                spaces = "  " * (size - i - 1)
 
             line = spaces + stars
             print(line)
