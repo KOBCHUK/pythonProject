@@ -1,14 +1,14 @@
 try:
-    n = int(input("Enter numder: "))
-    if n <= 0:
-        raise Exception('Number must be greater than 0')
+    n = int(input("Enter number: "))
+    if n < 0:
+        raise Exception('Number cannot be negative')
     if n % 2 == 0:
-        raise Exception('Number must be odd')
+        raise Exception('Number cannot be even')
     i = 0
     while i < n:
         j = 0
         while j < n:
-            if i >= j and i + j <= n - 1:
+            if (i <= j and i + j >= n - 1) or (i >= j and i + j <= n - 1):
                 print('*', end=' ')
             else:
                 print(' ', end=' ')
