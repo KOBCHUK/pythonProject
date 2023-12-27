@@ -1,16 +1,22 @@
 try:
-    i = 0
-    while i < 5:
-        j = 0
-        while j < 5:
-            if (i == 0 and j == 4) or (i == 1 and j in [3, 4]) or (i == 2 and j in [2, 3, 4]) or (
-                    i == 3 and j in [3, 4]) or (i == 4 and j == 4):
-                print("* ", end=" ")
-            else:
-                print("  ", end=" ")
-            j += 1
-        print()
-        i += 1
+        n = int(input("Enter number: "))
+        if n < 0:
+            raise Exception('Number must be positive')
+        if n % 2 == 0:
+            raise Exception('Number must be odd')
+        i = 0
+        while i < n:
+            j = 0
+            while j < n:
+                if i <= j and i + j >= n - 1:
+                    print('*', end=' ')
+                else:
+                    print(' ', end=' ')
+                j += 1
+            print()
+            i += 1
+
+
 except Exception as e:
     print(e)
     print('Error importing modules')
