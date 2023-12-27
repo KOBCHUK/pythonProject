@@ -1,14 +1,14 @@
 try:
     n = int(input("Enter number: "))
-    if n < 0:
-        raise Exception('Number cannot be negative')
+    if n <= 0:
+        raise Exception('Number should be greater than 0')
     if n % 2 == 0:
-        raise Exception('Number cannot be even')
+        raise Exception('Number should be odd')
     i = 0
     while i < n:
         j = 0
         while j < n:
-            if (i <= j and i + j >= n - 1) or (i >= j and i + j <= n - 1):
+            if (i <= j and i + j <= n - 1) or (i >= j and i + j >= n - 1):
                 print('*', end=' ')
             else:
                 print(' ', end=' ')
@@ -18,3 +18,4 @@ try:
 except Exception as e:
     print(e)
     print('Error importing modules')
+
