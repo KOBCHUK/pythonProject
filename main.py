@@ -2,7 +2,19 @@ try:
     number_task = int(input("Enter the task 1-10: "))
     if number_task == 1:
         print("Ex_1:")
-
+        x = 5
+        y = 5
+        i = j = 0
+        while i < x:
+            j = 0
+            while j < y:
+                if i <= j:
+                    print('*  ', end='')
+                else:
+                    print('   ', end='')
+                j += 1
+            print()
+            i += 1
     elif number_task == 2:
         print("Ex_2:")
 
