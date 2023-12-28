@@ -17,7 +17,15 @@ try:
             i += 1
     elif number_task == 2:
         print("Ex_2:")
-
+        i = 3
+        while i >= 0:
+            j = 0
+            while j < 4:
+                if i + j < 4:
+                    print("*  ", end="")
+                j += 1
+            print()
+            i -= 1
     elif number_task == 3:
         print("Ex_3:")
 
